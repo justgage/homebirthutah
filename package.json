@@ -1,0 +1,26 @@
+{
+  "name": "homebirth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dato": "dato"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justgage/homebirthutah.git"
+  },
+  "author": "Gage Peterson for Gentle Birth and Women's Health",
+  "license": "ALL RIGHTS RESERVED",
+  "bugs": {
+    "url": "https://github.com/justgage/homebirthutah/issues"
+  },
+  "homepage": "https://github.com/justgage/homebirthutah#readme",
+  "devDependencies": {
+    "datocms-client": "^0.3.25"
+  },
+  "dependencies": {
+    "html-tag": "^1.0.0"
+  }
+}
