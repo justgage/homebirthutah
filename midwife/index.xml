@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Midwives on Home Birth Utah</title>
+    <link>http://example.org/midwife/</link>
+    <description>Recent content in Midwives on Home Birth Utah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/midwife/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debbie Gordon</title>
+      <link>http://example.org/midwife/debbie-gordon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/midwife/debbie-gordon/</guid>
+      <description>For more than half my lifetime (since 1985), I have been working with childbearing women and families. I have always believed that women had everything they needed to birth their babies calmly, gently, safely, and well. It has been my calling and I have experienced an immeasurable amount of joy being involved in the miracle of childbirth.
+How women give birth matters! It literally changes who we are and the confidence with which we parent and care for the needs of our little ones.</description>
+    </item>
+    
+  </channel>
+</rss>
