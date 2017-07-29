@@ -29,7 +29,7 @@ module.exports = (dato, root, i18n) => {
 
   root.directory("content", content => {
 
-    console.log(tabs.map(tab => {
+    tabs.map(tab => {
 
       // make a new folder for each tab
       content.directory(tab.slug, dir => {
@@ -59,7 +59,7 @@ module.exports = (dato, root, i18n) => {
 
       });
 
-      return tab.toMap();
-    }));
+      console.log(JSON.stringify(tab.toMap(), null, 4));
+    });
   });
 };
