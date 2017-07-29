@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"
+  />
+  <title>{{ if (not .IsHome ) }}{{.Title}} - {{end}}{{ $.Site.Title }}</title>
+</head>
+
+<body>
+  <header class="center mw7 tc pal bb b-near-white flex flex-row items-baseline justify-between">
+    <h1 class="thin link-child"><a class="link" href="/">{{ $.Site.Title }}</a></h1>
+    <nav class="">
+      <ul class="list pln">
+        <li class="dib pr2"><a href="/">Home</a></li>
+        <li class="dib pr2"><a href="/post/">Blog</a></li>
+        <li class="dib pr2"><a href="/about/">About</a></li>
+        <li class="dib pr2"><a href="/midwives/">Midwives</a></li>
+      </ul>
+    </nav>
+  </header>

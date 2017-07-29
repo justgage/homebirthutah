@@ -35,9 +35,9 @@ module.exports = (dato, root, i18n) => {
       content.directory(tab.slug, dir => {
 
         // for each of the listings make a page
-        tab.listings.map(listing => {
+        tab.listings.map((listing, i) => {
           dir.createPost(`/${toSlug(listing.name)}.md`,
-            "toml", {
+            "yaml", {
               frontmatter: {
                 title: listing.name,
                 photo: listing.picture && listing.picture
@@ -51,7 +51,7 @@ module.exports = (dato, root, i18n) => {
                 phone: listing.phone,
                 websiteUrl: listing.website,
                 seoMetaTags: toHtml(listing.seoMetaTags),
-                weight: listing.position,
+                weight: i,
               },
               content: listing.description
             });

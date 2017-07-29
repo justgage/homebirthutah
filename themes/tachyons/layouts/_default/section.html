@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<body lang="en">
+
+  <main class="mw7 center">
+    <div>
+      <h1 class="baskerville tc mt5 ttu tracked f1 fw1">{{ .Title }}</h1> {{ range .Data.Pages.GroupByDate "2006" }}
+      <div class="">
+        {{ range .Pages }} {{ .Render "li"}} {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </main>
+
+  {{ partial "footer.html" . }}
