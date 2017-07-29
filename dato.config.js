@@ -41,8 +41,12 @@ module.exports = (dato, root, i18n) => {
               frontmatter: {
                 title: listing.name,
                 photo: listing.picture && listing.picture
-                  .url(),
-                type: "midwife",
+                  .url({
+                    auto: "compress",
+                    w: 300,
+                    fm: 'jpg'
+                  }),
+                type: "tab",
                 email: listing.email,
                 phone: listing.phone,
                 websiteUrl: listing.website,
