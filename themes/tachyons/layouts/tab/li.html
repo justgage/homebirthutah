@@ -5,10 +5,10 @@
             <div class="lh-copy">
                 {{ .Content }}
             </div>
-            <div class="ml3">
-                <div class="mv2">Phone: <a href="tel:{{ .Params.phone }}"> {{ .Params.phone }}</a></div>
-                <div class="mv2">Email: <a href="mailto:{{ .Params.email }}"> {{ .Params.email }}</a></div>
-                <div class="mv2">Website: <a href="http://{{ .Params.websiteUrl }}">{{ .Params.websiteUrl }}</a></div>
+            <div class="ml3 mt4">
+                <div class="mv2">📞 Phone: <a class="green" href="tel:{{ .Params.phone }}"> {{ .Params.phone }}</a></div>
+                <div class="mv2">✉️  Email: <a class="green" href="mailto:{{ .Params.email }}"> {{ .Params.email }}</a></div>
+                <div class="mv2">🔗 Website: <a class="green" href="http://{{ .Params.websiteUrl }}">{{ .Params.websiteUrl }}</a></div>
             </div>
         </div>
         <a href="{{ .Permalink }}"><img class="mt3 ml4" src="{{.Params.Photo}}" /></a>

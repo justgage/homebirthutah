@@ -10,15 +10,17 @@
   <title>{{ if (not .IsHome ) }}{{.Title}} - {{end}}{{ $.Site.Title }}</title>
 </head>
 
-<body>
-  <header class="center mw7 tc pal bb b-near-white flex flex-row items-baseline justify-between">
-    <h1 class="thin link-child"><a class="link" href="/">{{ $.Site.Title }}</a></h1>
-    <nav class="">
-      <ul class="list pln">
-        <li class="dib pr2"><a href="/">Home</a></li>
-        <li class="dib pr2"><a href="/post/">Blog</a></li>
-        <li class="dib pr2"><a href="/about/">About</a></li>
-        <li class="dib pr2"><a href="/midwives/">Midwives</a></li>
-      </ul>
-    </nav>
+<body class="avenir flex flex-column flex-row-l">
+  <header class="bg-light-green white pr3-ns mr3-ns">
+    <div class="center mw7 border-box pa3 flex flex-column tl-ns items-center">
+      <h1 class="thin link-child mb0"><a class="white link" href="/">{{ $.Site.Title }}</a></h1>
+      <nav class="flex justify-center">
+        <ul class="f4 list flex flex-column pa0 justify-stretch">
+          <li class="pa2"><a class="link white hover-bg-white-60" href="/">Home</a></li>
+          <li class="pa2"><a class="link white hover-bg-white-60" href="/post/">Blog</a></li>
+          <li class="pa2"><a class="link white hover-bg-white-60" href="/about/">About</a></li>
+          <li class="pa2"><a class="link white hover-bg-white-60" href="/midwives/">Midwives</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
