@@ -5,22 +5,37 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"
-  />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css" /> -->
+  <link rel="stylesheet" href="/css/tachyons.css" />
   <title>{{ if (not .IsHome ) }}{{.Title}} - {{end}}{{ $.Site.Title }}</title>
 </head>
 
-<body class="avenir flex flex-column flex-row-l">
-  <header class="bg-light-green white pr3-ns mr3-ns">
-    <div class="center mw7 border-box pa3 flex flex-column tl-ns items-center">
-      <h1 class="thin link-child mb0"><a class="white link" href="/">{{ $.Site.Title }}</a></h1>
+<body class="avenir flex flex-column">
+  <header style="background-image: url(/happy-women.jpg)"class="white cover bg-center flex justify-center h7">
+    <div  class="bg-light-green o-90 flex flex-column tl-ns items-center ph4">
+      <h1 class="thin link-child mb0">
+        <a class="white link flex flex-column items-center" href="/">
+          <img class="w3 pb3" src="/stork.svg" />
+          <div>{{ $.Site.Title }}</div>
+        </a>
+      </h1>
       <nav class="flex justify-center">
-        <ul class="f4 list flex flex-column pa0 justify-stretch">
-          <li class="pa2"><a class="link white hover-bg-white-60" href="/">Home</a></li>
-          <li class="pa2"><a class="link white hover-bg-white-60" href="/post/">Blog</a></li>
-          <li class="pa2"><a class="link white hover-bg-white-60" href="/about/">About</a></li>
-          <li class="pa2"><a class="link white hover-bg-white-60" href="/midwives/">Midwives</a></li>
+
+        <nav class="sidebar-nav">
+        <ul class="f4 list flex flex-row pa0 justify-stretch">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <li class="pa2"><a class="
+              link pv2 ph3 br3
+                {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+                bg-white light-green
+                {{else}}
+                white hover-bg-white hover-light-green
+                {{end}}
+                  " href="{{.URL}}">{{ .Name }}</a></li>
+          {{ end }}
         </ul>
+        </nav>
       </nav>
     </div>
   </header>
