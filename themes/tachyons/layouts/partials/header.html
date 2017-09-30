@@ -12,27 +12,26 @@
 
 <body class="avenir flex flex-column">
   <header style="background-image: url(/happy-women.jpg)"class="white cover bg-center flex justify-center h7">
-    <div  class="bg-light-green o-90 flex flex-column tl-ns items-center ph4">
-      <h1 class="thin link-child mb0">
+    <div  class="bg-green w-100 w-auto-ns o-90 flex flex-column tl-ns items-center ph4">
+      <div class="thin link-child mt4">
         <a class="white link flex flex-column items-center" href="/">
           <img class="w3 pb3" src="/stork.svg" />
-          <div>{{ $.Site.Title }}</div>
+          <h1 class="mt2 mb0 tc">{{ $.Site.Title }}</h1>
         </a>
-      </h1>
+      </div>
       <nav class="flex justify-center">
-
         <nav class="sidebar-nav">
-        <ul class="f4 list flex flex-row pa0 justify-stretch">
+        <ul class="f4 list flex flex-column flex-row-ns pa0 items-center ph4 border-box">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-          <li class="pa2"><a class="
-              link pv2 ph3 br3
-                {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-                bg-white light-green
-                {{else}}
-                white hover-bg-white hover-light-green
-                {{end}}
-                  " href="{{.URL}}">{{ .Name }}</a></li>
+          <li class="ma3 pa2
+            br3
+            {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+            bg-white green
+            {{else}}
+            white hover-bg-white hover-green
+            {{end}}
+            "><a class="color-inherit link pv2 ph3" href="{{.URL}}">{{ .Name }}</a></li>
           {{ end }}
         </ul>
         </nav>
