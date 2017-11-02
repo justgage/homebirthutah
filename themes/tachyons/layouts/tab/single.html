@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <main class="pal measure center">
-  <a class="tc link green center db pa3 mv3 hover-bg-light-green hover-white br1" href="{{ .Params.CategorySlug  }}"><div> ←  All {{ .Params.Category }}</div></a>
+  <a class="tc link green center db pa3 mv3 hover-bg-light-green hover-white br1" href="/{{ .Params.CategorySlug  }}"><div> ←  All {{ .Params.Category }}</div></a>
   <img class="db center ma4" src="{{.Params.Photo}}" />
   <h1>{{ .Title }}</h1>
   <h2 class="tc f5 green ttu tracked">Category: {{ .Params.Category }}</h2>
