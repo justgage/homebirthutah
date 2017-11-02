@@ -1,6 +1,6 @@
 title = "Utah Natural Birth"
 subtitle = ""
-baseURL = "http://example.org/"
+baseURL = "http://homebirthutah.netlify.com/"
 languageCode = "en-us"
 theme = "tachyons"
 sectionPagesMenu = "main"
