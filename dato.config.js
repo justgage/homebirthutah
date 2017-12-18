@@ -34,6 +34,7 @@ module.exports = (dato, root, i18n) => {
           dir.createPost(`/${toSlug(listing.name)}.md`, 'yaml', {
             frontmatter: {
               title: listing.name,
+              position: listing.position,
               photo:
                 listing.picture &&
                   listing.picture.url({
