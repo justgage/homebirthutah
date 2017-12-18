@@ -7,34 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css" /> -->
   <link rel="stylesheet" href="/css/tachyons.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <title>{{ if (not .IsHome ) }}{{.Title}} - {{end}}{{ $.Site.Title }}</title>
 </head>
 
 <body class="avenir flex flex-column">
+  <nav id="nav" class="flex flex-column justify-start vh-100 overflow-auto w-100  w-30-ns fixed right-0 db-ns bg-dark-green z-max" style="width: 0;">
+    <a href="javascript:void(0)" class="absolute pointer top-0 right-1 pa3 link white f1 z-max grow-large touch-link" onclick="closeNav()">
+      &times;
+    </a>
+    <nav class="sidebar-nav relative" v-bind:class="{ sidebar-open: isActive }">
+      <a class="link white hover-white-80" href="/">
+        <h2 class="bb b--green f4 fw1 mh4 ttu tracked-mega mb0 pv3 dib">
+          Menu
+        </h2>
+      </a>
+      <ul class="f4 list flex flex-column pa0 items-stretch border-box">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <li>
+          <a class="
+            nowrap
+            db
+          link
+          pv3
+          ph4
+          width-100
+          bg-animate
+          {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+          white
+          {{else}}
+          white-60 hover-bg-green hover-white-90
+          {{end}}
+            " href="{{.URL}}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </nav>
   <header style="background-image: url(/happy-women.jpg)"class="white cover bg-center flex justify-center h7">
-    <div  class="bg-green w-100 w-auto-ns o-90 flex flex-column tl-ns items-center ph4">
+    <a class="pointer link f1 pa2 white absolute pa3 right-1 top-0 dim z-5" onclick="openNav()">
+      &equiv;
+    </a>
+    <div  class="bg-green w-100 pb3 o-90 flex flex-column tl-ns items-center ph4">
       <div class="thin link-child mt4">
         <a class="white link flex flex-column items-center" href="/">
           <img class="w3 pb3" src="/stork.svg" />
           <h1 class="mt2 mb0 tc">{{ $.Site.Title }}</h1>
         </a>
       </div>
-      <nav class="flex justify-center">
-        <nav class="sidebar-nav">
-        <ul class="f4 list flex flex-column flex-row-ns pa0 items-center ph4 border-box">
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-          <li class="ma3 pa2
-            br3
-            {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-            bg-white green
-            {{else}}
-            white hover-bg-white hover-green
-            {{end}}
-            "><a class="color-inherit link pv2 ph3" href="{{.URL}}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-        </nav>
-      </nav>
     </div>
   </header>

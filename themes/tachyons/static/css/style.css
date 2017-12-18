@@ -1,0 +1,8 @@
+#nav {
+  transition: width 0.25s;
+}
+
+.touch-link {
+  -ms-touch-action: manipulation;	/* IE10  */
+  touch-action: manipulation;		/* IE11+ */
+}
