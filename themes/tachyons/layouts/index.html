@@ -8,15 +8,15 @@
     <div class="measure pv3 lh-copy f3">
         {{ .Content }}
     </div>
-    <!-- {{ range .Site.Menus.main }} -->
-    <!-- <article class="pa2"> -->
-    <!--     <a class="green link pv2 ph3 br3 " href="{{.URL}}"> -->
-    <!--         <h2> -->
-    <!--             {{ .Name }} -->
-    <!--         </h2> -->
-    <!--     </a> -->
-    <!-- </article> -->
-    <!-- {{ end }} -->
+    {{ range .Site.Data.Tabs }}
+    <article class="pa2">
+        <a class="green link pv2 ph3 br3 " href="{{.URL}}">
+            <h2>
+                {{ .Name }}
+            </h2>
+        </a>
+    </article>
+    {{ end }}
 </main>
 
 {{ partial "footer.html" . }}

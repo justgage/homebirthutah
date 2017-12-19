@@ -29,6 +29,16 @@ module.exports = (dato, root, i18n) => {
     tabs.map(tab => {
       // make a new folder for each tab
       content.directory(tab.slug, dir => {
+
+        dir.createPost(`/_index.md`, 'yaml', {
+          frontmatter: {
+            // tab: tab.toMap()
+            title: tab.title,
+            image: tab.image.value,
+            content: tab.description
+          },
+          content: tab.description || ""
+        })
         // ---------- listing (Karla) ----------
         tab.listings.map((listing, i) => {
           dir.createPost(`/${toSlug(listing.name)}.md`, 'yaml', {

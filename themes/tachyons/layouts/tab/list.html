@@ -4,7 +4,7 @@
   <main class="measure center">
     <h1>{{ .Title }}</h1>
     <div>
-      {{ range sort .Pages "position" "desc" }} {{ .Render "li"}} {{ end }}
+      {{ range sort .Pages "position" "desc" }} {{ .Render "li" }} {{ end }}
     </div>
   </main>
 
