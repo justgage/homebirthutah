@@ -7,7 +7,7 @@
     <h2 class="tc">Listings</h2>
     </div>
     {{ range sort .Site.Sections "Params.position" }}
-    <article class="dim hover-o-50 w-80-ns center ba b--light-gray lh-copy mv3 br3-ns bs1 overflow-hiden">
+    <article class="w-50-l dim hover-o-50 w-80-ns center ba b--light-gray lh-copy mv3 br3-ns bs1 overflow-hiden">
         <a class="w-50-ns black link" href="{{.URL}}">
             <div class="b--silver flex flex-row-ns flex-column items-start">
                 <img class="mr3 w-100 w-40-ns" src="{{.Params.Image}}" />
