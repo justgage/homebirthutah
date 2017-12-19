@@ -1,16 +1,16 @@
-<div class="border-box center mw8 pa4 bb b--black-20">
-    <div class="">
+<div class="border-box center mw8 ph4-ns pv4 bb b--black-20">
+    <div class="flex flex-column">
         <a class="db tc" href="{{ .Permalink }}"><img class="br3 image" src="{{.Params.Photo}}" /></a>
         <div class="measure">
             <h2 class="mv3 tc"><a class="link black black-80-hover" href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <div class="lh-copy">
-                {{ .Content }}
-            </div>
+            <span class="dn di-ns">
+            <div class="lh-copy"> {{ .Content }} </div>
             <div class="ml3 mt4">
                 <div class="mv2">📞 Phone: <a class="green" href="tel:{{ .Params.phone }}"> {{ .Params.phone }}</a></div>
                 <div class="mv2">✉️  Email: <a class="green" href="mailto:{{ .Params.email }}"> {{ .Params.email }}</a></div>
                 <div class="mv2">🔗 Website: <a class="green" href="http://{{ .Params.websiteUrl }}">{{ .Params.websiteUrl }}</a></div>
             </div>
+            </span>
         </div>
     </div>
 

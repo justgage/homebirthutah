@@ -1,19 +1,23 @@
 {{ partial "header.html" . }}
 
 
-<main class="pax center">
-    <h1 class="pt4">
-        {{ .Title }}
-    </h1>
-    <div class="measure pv3 lh-copy f3">
+<main class="">
+    <div class="measure center pv3 lh-copy f3-ns">
         {{ .Content }}
+    <h2 class="tc">Listings</h2>
     </div>
-    {{ range .Site.Data.Tabs }}
-    <article class="pa2">
-        <a class="green link pv2 ph3 br3 " href="{{.URL}}">
-            <h2>
-                {{ .Name }}
-            </h2>
+    {{ range sort .Site.Sections "Params.position" }}
+    <article class="dim hover-o-50 w-80-ns center ba b--light-gray lh-copy mv3 br3-ns bs1 overflow-hiden">
+        <a class="w-50-ns black link" href="{{.URL}}">
+            <div class="b--silver flex flex-row-ns flex-column items-start">
+                <img class="mr3 w-100 w-40-ns" src="{{.Params.Image}}" />
+                <div class="w-60-ns ph2 ph0-ns">
+                    <h2 class=""> {{ .Title }} </h2>
+                    <p class="measure">
+                        {{ .Params.Blurb }}
+                    </p>
+                </div>
+            </div>
         </a>
     </article>
     {{ end }}

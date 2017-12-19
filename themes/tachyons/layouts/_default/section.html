@@ -1,12 +1,11 @@
 {{ partial "header.html" . }}
 
-  <main class="mw7 center">
+  <h1 class="tc fw5 mt5"> {{ .Title }} in Utah</h1>
+  <main class="measure center lh-copy f4-ns ph3">
+    <div class="mh3"> {{ .Content }}</div>
+    <h2 class="tc fw5 mt5 f1 bb b--green dib">Listings</h2>
     <div>
-      <h1 class="tc mt5 ttu tracked f1 fw3">{{ .Title }}</h1> {{ range .Data.Pages.GroupByDate "2006" }}
-      <div class="">
-        {{ range .Pages }} {{ .Render "li"}} {{ end }}
-      </div>
-      {{ end }}
+      {{ range sort .Pages "Params.Position" "desc" }} {{ .Render "li" }} {{ end }}
     </div>
   </main>
 

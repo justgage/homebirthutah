@@ -18,11 +18,11 @@
     </a>
     <nav class="sidebar-nav relative" v-bind:class="{ sidebar-open: isActive }">
       <a class="link white hover-white-80" href="/">
-        <h2 class="bb b--green f4 fw1 mh4 ttu tracked-mega mb0 pv3 dib">
+        <h2 class="bb b--green f4-ns fw1 mh4 ttu tracked-mega mb0 pv3 dib">
           Menu
         </h2>
       </a>
-      <ul class="f4 list flex flex-column pa0 items-stretch border-box">
+      <ul class="f4-ns list flex flex-column pa0 items-stretch border-box">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         <li>

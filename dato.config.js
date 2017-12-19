@@ -32,10 +32,11 @@ module.exports = (dato, root, i18n) => {
 
         dir.createPost(`/_index.md`, 'yaml', {
           frontmatter: {
-            // tab: tab.toMap()
             title: tab.title,
-            image: tab.image.value,
-            content: tab.description
+            blurb: tab.blurb,
+            position: tab.position,
+            image: tab.image.url({ fit: 'crop', crop: 'focalpoint', w: 800, h: 600, fm: 'jpg' }),
+            tab: 'tab'
           },
           content: tab.description || ""
         })

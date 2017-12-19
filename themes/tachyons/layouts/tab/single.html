@@ -1,12 +1,16 @@
 {{ partial "header.html" . }}
 
-<main class="pal measure center">
+<main class="pal measure center ph4">
   <a class="tc link green center db pa3 mv3 hover-bg-light-green hover-white br1" href="/{{ .Params.CategorySlug  }}"><div> ←  All {{ .Params.Category }}</div></a>
+  <h1 class="tc">{{ .Title }}</h1>
   <img class="db center ma4" src="{{.Params.Photo}}" />
-  <h1>{{ .Title }}</h1>
-  <h2 class="tc f5 green ttu tracked">Category: {{ .Params.Category }}</h2>
   <div class="measure lh-copy">
     {{ .Content }}
+    <div class="ml3 mt4">
+      <div class="mv2">📞 Phone: <a class="green" href="tel:{{ .Params.phone }}"> {{ .Params.phone }}</a></div>
+      <div class="mv2">✉️  Email: <a class="green" href="mailto:{{ .Params.email }}"> {{ .Params.email }}</a></div>
+      <div class="mv2">🔗 Website: <a class="green" href="http://{{ .Params.websiteUrl }}">{{ .Params.websiteUrl }}</a></div>
+    </div>
   </div>
 </main>
 
