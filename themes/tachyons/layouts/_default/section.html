@@ -3,9 +3,11 @@
   <h1 class="tc fw5 mt5"> {{ .Title }} in Utah</h1>
   <main class="measure center lh-copy f4-ns ph3">
     <div class="mh3"> {{ .Content }}</div>
-    <h2 class="tc fw5 mt5 f1 bb b--green dib">Listings</h2>
+    <div display="flex justify-center items-center tc">
+      <h2 class="tc fw5 mt5 f2 center w4 bb b--green">Listings</h2>
+    </div>
     <div>
-      {{ range sort .Pages "Params.Position" "desc" }} {{ .Render "li" }} {{ end }}
+      {{ range sort .Pages "Params.position" }} {{ .Render "li" }} {{ end }}
     </div>
   </main>
 
